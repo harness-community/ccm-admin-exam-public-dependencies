@@ -4,13 +4,14 @@ metadata:
   name: autostopping-<PROJECT_NAME>-rule
   namespace: ccm-challenge
   annotations:
+      # do not change this harness annotation
       harness.io/cloud-connector-id: dummyaws
 spec:
     service:
-        name: autostopping-anbu-svc
+        name: <SVC_NAME>
         port: 80
     ingress:
-        name: autostopping-anbu-ig
+        name: <ING_NAME>
         controllerName: nginx
     idleTimeMins: 5
     hideProgressPage: false
