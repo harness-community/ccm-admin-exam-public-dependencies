@@ -1,6 +1,7 @@
 apiVersion: ccm.harness.io/v1
 kind: AutoStoppingRule
 metadata:
+  # do not change this AutoStoppingRule name, as we need it for the jq engine
   name: autostopping-<PROJECT_NAME>-rule
   namespace: ccm-challenge
   annotations:
