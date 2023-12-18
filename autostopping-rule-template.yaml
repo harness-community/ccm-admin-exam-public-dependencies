@@ -1,0 +1,16 @@
+apiVersion: ccm.harness.io/v1
+kind: AutoStoppingRule
+metadata:
+  name: autostopping-<PROJECT_NAME>-rule
+  namespace: ccm-challenge
+  annotations:
+      harness.io/cloud-connector-id: dummyaws
+spec:
+    service:
+        name: autostopping-anbu-svc
+        port: 80
+    ingress:
+        name: autostopping-anbu-ig
+        controllerName: nginx
+    idleTimeMins: 5
+    hideProgressPage: false
